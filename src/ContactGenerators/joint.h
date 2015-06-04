@@ -1,13 +1,12 @@
 #ifndef _JOINT_H
 #define _JOINT_H
 
-#include "Base/vector.h"
-#include "contacts.h"
-#include "narrow_collision.h"
+#include "../Base/vector.h"
+#include "../contacts.h"
+#include "../narrow_collision.h"
 /*
 'Joint' ContactGenerator is used to joint two vector position.
 */
-
 
 namespace RPEngine
 {
@@ -34,7 +33,6 @@ namespace RPEngine
 				RigidBody *bodyB, const Vector3 & b_pos,
 				real _epsilonDistance);
 		virtual int addContact(CollisionData *data, int limit) const;
-
 	};
 }
 
