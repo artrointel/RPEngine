@@ -198,7 +198,7 @@ namespace RPEngine
 	static const Vector3 originVect;
 
 	// Default Epsilon = 0.0001f;
-	static inline bool IsEqual(Vector3 &v1, Vector3 &v2, real epsilon = 0.0001f) 
+	static inline bool IsEqual(Vector3 &v1, Vector3 &v2, real epsilon = EPSILON) 
 	{
 		if(real_abs(v1.x - v2.x) < epsilon)
 			if(real_abs(v1.y - v2.y) < epsilon)
