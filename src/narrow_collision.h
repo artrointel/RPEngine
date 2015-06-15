@@ -1,8 +1,8 @@
 #ifndef _NARROW_COLLISION_H
 #define	_NARROW_COLLISION_H
 #include"contacts.h"
-#include"vector.h"
-#include"rbody.h"
+#include"Base/vector.h"
+#include"Base/rbody.h"
 
 namespace RPEngine
 {
