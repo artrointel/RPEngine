@@ -213,7 +213,7 @@ namespace RPEngine
 		}
 
 		//대각행렬
-		void setSkewSymmetric(Vector3 vector)
+		inline void setSkewSymmetric(Vector3 vector)
 		{
 			data[0] = data[4] = data[8] = 0;
 			data[1] = -vector.z;
@@ -225,12 +225,35 @@ namespace RPEngine
 			data[7] = vector.x;
 		}
 
-		inline void setComponents(Vector3 &x_axis, Vector3 &y_axis, Vector3 &z_axis);
+		inline void setComponents(Vector3 &x_axis, Vector3 &y_axis, Vector3 &z_axis)
+		{
+			data[0] = x_axis.x;
+			data[1] = y_axis.x;
+			data[2] = z_axis.x;
+
+			data[3] = x_axis.y;
+			data[4] = y_axis.y;
+			data[5] = z_axis.y;
+	
+			data[6] = x_axis.z;
+			data[7] = y_axis.z;
+			data[8] = z_axis.z;
+		}
 
 		//void setOrientation(const Quaternion &q)
 		static Matrix3 linearInterpolate(const Matrix3 &a, 
 										 const Matrix3 &b,
-										 real prop);
+										 real prop)
+		{
+			Matrix3 result;
+			real omp = 1.0 - prop;
+			for(int i = 0; i < 9; i++)
+				result.data[i] = a.data[i] * omp + b.data[i] * prop;
+	
+			return result;
+		}
+
+
 	};
 
 	class Matrix4 //3 by 4
