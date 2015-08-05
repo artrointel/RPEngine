@@ -1,7 +1,7 @@
 
 #ifndef _RP_ENGINE_PARTICLE_H
 #define _RP_ENGINE_PARTICLE_H
-#include "Base/vector.h"
+#include "../Base/vector.h"
 namespace RPEngine
 {
 	class Particle
@@ -69,5 +69,4 @@ namespace RPEngine
 		//pos_cpy, vel_cpy, acc_cpy
 	};
 }
-
 #endif
