@@ -1,19 +1,15 @@
 /*
 
-RigidBody Physics Engine ver_1.3, 2014.
+RigidBody Physics Engine ver_1.4r, 2015.
 
 RPEngine is RigidBody Dynamics for general purpose.
 
 This engine referenced OpenSource below
 1. Cyclone Engine - Ian Millington
 
-Written by KWH. 2014-08-13.
+Written by Woohyun.Kim. 2015-08-05.
 
 */
-
-/* enable specialized version of RPEngine */
-#define GET_OBJECTS_FORCE 
-// if the app need force data, you can get from RigidBody 'linearForce' Vector3
 
 /* Base components */
 #include "Base/vector.h"
@@ -21,12 +17,12 @@ Written by KWH. 2014-08-13.
 #include "Base/quaternion.h"
 
 /* Particle engine */
-#include "pworld.h"
+#include "ParticleEngine/pworld.h"
 
-#include "particle.h"
-#include "pfgen.h"
-#include "pcontacts.h"
-#include "plinks.h"
+#include "ParticleEngine/particle.h"
+#include "ParticleEngine/pfgen.h"
+#include "ParticleEngine/pcontacts.h"
+#include "ParticleEngine/plinks.h"
 
 /* RigidBody engine */
 #include "world.h"
@@ -38,15 +34,6 @@ Written by KWH. 2014-08-13.
 
 #include "narrow_collision.h"
 
-//additional components
+// Additional components
 #include "ContactGenerators/joint.h"
 #include "ContactGenerators/staticJoint.h"
-
-
-#if 0
-	// not complete yet
-	#include "broad_collision.h"
-	// for engine users, some physical models
-	// #include "Springkler.h"
-
-#endif
