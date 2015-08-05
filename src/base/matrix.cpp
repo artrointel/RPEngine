@@ -5,33 +5,6 @@
 
 using namespace RPEngine;
 
-/* Matrix3 */
-
-Matrix3 Matrix3::linearInterpolate(const Matrix3 &a, const Matrix3 &b, real prop)
-{
-	Matrix3 result;
-	real omp = 1.0 - prop;
-	for(int i = 0; i < 9; i++)
-		result.data[i] = a.data[i] * omp + b.data[i] * prop;
-	
-	return result;
-}
-
-void Matrix3::setComponents(Vector3 &x_axis, Vector3 &y_axis, Vector3 &z_axis)
-{
-	data[0] = x_axis.x;
-	data[1] = y_axis.x;
-	data[2] = z_axis.x;
-
-	data[3] = x_axis.y;
-	data[4] = y_axis.y;
-	data[5] = z_axis.y;
-	
-	data[6] = x_axis.z;
-	data[7] = y_axis.z;
-	data[8] = z_axis.z;
-}
-
 /* Matrix4 */
 
 Matrix4::Matrix4() // identity matrix
