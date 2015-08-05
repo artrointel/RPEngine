@@ -2,7 +2,8 @@
 #define _CONTACTS_H
 
 #include<iostream>
-#include"vector.h"
+#include"Base/vector.h"
+#include"Base/matrix.h"
 #include "rbody.h"
 
 namespace RPEngine
