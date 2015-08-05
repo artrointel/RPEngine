@@ -16,7 +16,8 @@ namespace RPEngine
 	class RPWorld
 	{
 	public:
-		int ITERATIONS_PER_CONTACT; //it can mean Collision Accuracy
+		int ITERATIONS_PER_CONTACT; // This means Collision Accuracy
+		real MIN_FRAME_RATE; // When The input duration is too large to solve collisions, devide at this rate and solve them.
 	public:
 		typedef std::vector<RigidBody *> RigidBodies;
 		typedef std::vector<ContactGenerator *> ContactGenerators;
@@ -64,9 +65,8 @@ namespace RPEngine
 		//explicit RPWorld(){}
 		explicit RPWorld(unsigned int _maxContacts, unsigned int iterations)
 			: resolver(iterations), maxContacts(_maxContacts),
-				ITERATIONS_PER_CONTACT(4)			  
+				ITERATIONS_PER_CONTACT(4), MIN_FRAME_RATE(0.02f)
 		{
-
 			contactArray = new Contact[maxContacts];
 			collisionData.initialize(contactArray, 0.9, 0.4); //as default
 			calculateIterations = (iterations == 0);
@@ -120,22 +120,6 @@ namespace RPEngine
 			 real deltaVelocity = 1, real eventCoolTime = 0.2);
 		bool removeCollisionWithArrayEvent(CollisionWithArray *collisionEvent);
 		void clearCollisionWithArrayEvent(); //delete all data not only pointer
-
-	private:/* template version not yet */
-		/*
-		template<class T>
-		bool removeCollision(T *collisionEvent, std::vector<T*> container)
-		{
-			class T::type::iterator iter = container.begin();
-			for(; iter != container.end(); iter++)
-				if(collisionEvent == (*iter))
-				{
-					container.erase(iter);
-					return true;
-				}
-				return false;
-		}
-		*/
 	};
 }
 
