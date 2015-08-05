@@ -5,7 +5,6 @@
 
 namespace RPEngine
 {
-
 	ParticleWorld::ParticleWorld(unsigned int _maxContacts, unsigned int iterations)
 		: resolver(iterations), maxContacts(_maxContacts)
 	{
@@ -64,6 +63,5 @@ namespace RPEngine
 		}
 	}
 }
-
 
 #endif
