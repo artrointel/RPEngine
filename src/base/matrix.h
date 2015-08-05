@@ -165,11 +165,10 @@ namespace RPEngine
 					 mat.data[1] * mat.data[3] * mat.data[8]);
 		}
 
-		//차라리 getInverse를 새로 만드는 것이 더 나을 것 같다.
 		inline void setInverse(const Matrix3 &mat)
 		{
 			real detM = getDeterminant(mat);
-			if(detM == static_cast<real>(0.0f)) return; // but almost not return, it requires epsilon
+			if(detM == static_cast<real>(0.0f)) return; // but doesn't return actually, it requires epsilon
 			real invDetM = static_cast<real>(1.0f) / detM;
 
 			data[0] = (mat.data[4]*mat.data[8] - mat.data[5]*mat.data[7]) * invDetM;
@@ -212,7 +211,6 @@ namespace RPEngine
 			return result;
 		}
 
-		//대각행렬
 		inline void setSkewSymmetric(Vector3 vector)
 		{
 			data[0] = data[4] = data[8] = 0;
