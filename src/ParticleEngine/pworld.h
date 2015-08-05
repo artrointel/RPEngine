@@ -33,10 +33,7 @@ namespace RPEngine
 		unsigned int generateContacts();
 		void integrate(real duration);
 		void runPhysics(real duration);
-
 	};
-
 }
-
 
 #endif
