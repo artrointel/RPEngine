@@ -2,7 +2,7 @@
 #define	_NARROW_COLLISION_H
 #include"contacts.h"
 #include"Base/vector.h"
-#include"Base/rbody.h"
+#include"rbody.h"
 
 namespace RPEngine
 {
@@ -98,7 +98,7 @@ namespace RPEngine
 			CollisionData *_data, int _size);
 
 	public:/* (trigger) search collision from collision data and remove the collision data */
-		//
+		
 	};
 }
 
