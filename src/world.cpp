@@ -19,14 +19,19 @@ void RPWorld::startFrame()
 	}
 }
 
-//updating..
 void RPWorld::runPhysics(real duration)
 {
-	if(duration > 100.f)
+	std::cout << duration << "in engine duration";
+	std::cout << MIN_FRAME_RATE<<std::endl;
+	if(duration <= 0) return;
+	if(duration > MIN_FRAME_RATE)
 	{
-		std::cout << "warning; physics engine cannot resolve system because the fps is too low. (10fps)\n";
-		duration = 100.f;
+		duration -= MIN_FRAME_RATE;
+		std::cout << duration <<" frame division.\n";
+		runPhysics(duration);
+		duration = MIN_FRAME_RATE;
 	}
+
 	registry.updateForces(duration); //apply forces
 	integrate(duration); // calculate pos, vel, acc all bodies 
 
@@ -37,7 +42,7 @@ void RPWorld::runPhysics(real duration)
 	unsigned int usedContacts = generateContacts();
 
 	//detect broad collision 
-	//SAT or GJK
+	//SAT or GJK, not yet.
 
 	//detect narrow collision
 	usedContacts += _narrowCollisionDetect();
