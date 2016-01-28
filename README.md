@@ -2,7 +2,7 @@
 
 3D Rigidbody Physics Engine (CPU-based, Collision-based)
 
-This engine is based on Cyclone Engine ("Ian Millington, Game Physics Engine Development").
+This engine is based on the Cyclone Engine ("Ian Millington, Game Physics Engine Development").
 
 1. Purpose
 
