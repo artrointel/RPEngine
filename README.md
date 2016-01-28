@@ -1,70 +1,49 @@
+# RPEngine 1.04r (Release Date: Aug. 5, 2015)
 
- 2014.03.24 ~ Current Date.
+3D Rigidbody Physics Engine (CPU-based, Collision-based)
 
-# RPEngine 1.04r 2015.08.05
-
-
- 3D Rigidbody Physics Engine.
- Collision-based, CPU core based(Not GPU version)
+This engine is based on Cyclone Engine ("Ian Millington, Game Physics Engine Development").
 
 1. Purpose
 
-	1.1. Education for engine development.
+	1.1. For education (physics engine development)
 
-	 This engine is based on Cyclone Engine("Ian Millington, Game Physics Engine Development").
+	Referring to this project would be helpful if you are a novice of developing a physics engine. RPEngine can be a good cornerstone of your own engine development.
 
-	 And this project also aiming to be an easy way to start your engine development.
+	1.2. For simple simulations
 
-	1.2. Real simulation and also game.
+	RPEngine also provides an extendable framework for various simulations. Whatever you want to simulate, it is easy to implement proper codes by yourself (depending on functional rules/policies).
 
-	 This engine should provide accuracy for real simulation and also proximate simulation(for game).
+2. License
 
+MIT License
 
-2. Features
-
-	2.1. Supply for Plugged-in third party projects.
-
-	 We hope you to make some frameworks providing an easy way to implement dynamics to any application based on this RPEngine so user can implement dynamics without any physical domain knowledge.
-
-
-3. License
-
- MIT License
-
-
-4. Information
-
-	4.1. Open Source URL
+3. URLs
+	
+	3.1. GitHub
 
 	 https://github.com/Woohyun-Kim/RPEngine
 
-	4.2. For Korean
+	3.2. Additional information (Korean)
 
 	 http://macgom.tistory.com/category/PhysicsEngine
 
-	 Then you can find and open the *.hwp(translated in korean) file for learning development.
+4. Contact
 
-	4.3. Contact
-
-	 Republic of Korea, Woohyun Kim.
-
-	 artrointel@gmail.com
-
-	 
-
-# Update Log
+	 Woohyun Kim (email: artrointel@gmail.com)
 
 
-[2015.08.05] RPEngine 1.04release
+# Update Logs
 
-- Physics solver's FPS stability has been improved. but it should have a faster FPS recovery system.
+[Aug. 5, 2015] RPEngine 1.04r
 
-- You can build up the project now.
+- Physics solver's FPS stability has been improved. A faster FPS recovery system is being devised.
 
+- You can build up this project from now on.
 
-[2015.06.15] RPEngine 1.03debug
+[Jun. 15, 2015] RPEngine 1.03d
 
-- Uploading all of Source code has finished, but you shouldn't be able to build by itself.
+- The entire source codes has been uploaded (unable to be built-up).
 
+[Jun. 4, 2015] RPEngine first uploaded
 
-[2015.06.04] RPEngine first uploaded.
